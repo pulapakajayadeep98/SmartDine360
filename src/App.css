@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+ background: linear-gradient(135deg, #002060, #004080);
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #002060;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #444;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.demo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.demo-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.demo-form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.demo-form input:focus {
+  border-color: #ff4500;
+  outline: none;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #002060, #004080);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #014612, #003406);
+}
+
+.thank-you {
+  padding: 20px 0;
+  color: #333;
+  font-size: 1.0rem;
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.contact-info a {
+  color: #002060;
+  text-decoration: none;
+  
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+/* 🌟 Loading Screen */
+.loading-screen {
+ 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: fadeIn 1s ease;
+}
+
+.loading-animation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-logo {
+  width: 150px;
+  height: 150px;
+  animation: pulse 1.5s infinite ease-in-out;
+  z-index: 2;
+}
+
+/* Glowing Ring Around Logo */
+.loading-ring {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #00ffff;
+  border-radius: 50%;
+  animation: spin 2s linear infinite, glow 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #0072ff;
+  }
+  50% {
+    box-shadow: 0 0 40px #00ffff, 0 0 80px #0072ff;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
