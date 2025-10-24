@@ -172,24 +172,25 @@ body {
   /* Body — plain background, no gradient */
   body {
     background: none;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    padding: 20px 10px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* <-- center horizontally */
     overflow-x: hidden;
+    height: 100vh;
   }
 
   .container {
     width: 100%;
     max-width: 400px;
+    margin: 10px auto;  /* center container */
     background: #fff;
     border-radius: 16px;
     box-shadow: none;
-    padding: 25px 20px;
+    padding: 30px 20px;
     text-align: center;
-    margin-top: 10px;
   }
 
   .logo {
@@ -197,6 +198,15 @@ body {
     display: block;
     width: 100px;
     height: 100px;
+  }
+
+  /* Ensure inputs take full width */
+  .demo-form input {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
   }
 
   .title {
